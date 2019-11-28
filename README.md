@@ -42,7 +42,7 @@
 - 同上创建密钥文件 server.key.pem
   
 ## 补全证书链
-- 将下面字段粘贴至证书文件末尾
+- 将下面字段粘贴至证书文件(server.cert.pem)末尾
 ```
 -----BEGIN CERTIFICATE-----
 MIIETTCCAzWgAwIBAgILBAAAAAABRE7wNjEwDQYJKoZIhvcNAQELBQAwVzELMAkG
