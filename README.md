@@ -15,6 +15,10 @@
 
 ## 准备CSR,并保存匹配的私钥
 - *.domian.tld
+- 创建私钥文件 `server.key.pem`
+   - 新建空白文本文件
+   - 粘贴证书内容到空白文本内并保存
+   - 将文件重命名为 `server.key.pem` 得到私钥文件
 
 ## 申请证书
 - 填入准备的CSR和Apply Token信息
@@ -22,7 +26,7 @@
 
 ## 确认邮件
 - 通过邮箱获得确认邮件
-- 内置API邮箱获得确认邮件
+- 通过内置API邮箱获得确认邮件
   - 在填 CSR 的框框内填上 "MAIL" (不包括引号)
   - Apply Token 框内填申请时的 Apply Token
   - 点击 "Get AlphaSSL!", 即可看到提示.
@@ -30,7 +34,7 @@
 ## 获得证书
 - **注意**:此项步骤前需要**确认邮件**
 - 通过邮箱获得证书
-- 内置API获得证书
+- 通过内置API获得证书
   - 在填 CSR 的框框内填上 "VIEW" (不包括引号)
   - Apply Token 框内填申请时的 Apply Token
   - 点击 "Get AlphaSSL!", 即可看到申请的证书(已补全证书链).
@@ -39,11 +43,11 @@
 ## 创建证书文件
 - 新建空白文本文件
 - 粘贴证书内容到空白文本内并保存
-- 将文件重命名为 server.cert.pem
-- 同上创建密钥文件 server.key.pem
-  
+- 将文件重命名为 `server.cert.pem` 得到证书文件
+- 将证书文件`(server.cert.pem)`与私钥文件`(server.key.pem)`打包成一组.
+
 ## 补全证书链(可选)
-- 将下面字段粘贴至证书文件(server.cert.pem)末尾
+- 将下面字段粘贴至证书文件`(server.cert.pem)`末尾即可
 ```
 -----BEGIN CERTIFICATE-----
 MIIETTCCAzWgAwIBAgILBAAAAAABRE7wNjEwDQYJKoZIhvcNAQELBQAwVzELMAkG
