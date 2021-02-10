@@ -15,10 +15,10 @@
    - 将文件重命名为 `server.key.pem` 得到私钥文件
 
 ## 申请证书步骤
-- **注意**: 如果使用`内置API邮箱`,请先查看并完成`内置API邮箱使用方法`章节的步骤.
+- **注意**: 如果使用`内置API邮箱`,请先查看并完成[内置API邮箱使用方法](https://github.com/MoeClub/AlphaSSL/blob/master/README.md#%E5%86%85%E7%BD%AEapi%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)章节的步骤.
 - 填入准备的CSR和Apply Token信息, 点击 "Get AlphaSSL!"
 - 确认邮件.
-- 获得证书文件内容并创建证书文件.
+- 获得证书文件内容并[创建证书文件](https://github.com/MoeClub/AlphaSSL#%E5%88%9B%E5%BB%BA%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6).
 - 将证书文件`(server.cert.pem)`与私钥文件`(server.key.pem)`打包成一组.
 
 ## 创建证书文件
