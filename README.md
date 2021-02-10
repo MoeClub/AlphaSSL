@@ -18,12 +18,12 @@
 - **注意**: 如果使用`内置API邮箱`,请先查看并完成`内置API邮箱使用方法`章节的步骤.
 - 填入准备的CSR和Apply Token信息, 点击 "Get AlphaSSL!"
 - 获得证书文件内容并创建证书文件.
+- 将证书文件`(server.cert.pem)`与私钥文件`(server.key.pem)`打包成一组.
 
 ## 创建证书文件
 - 新建空白文本文件(txt文档)
 - 粘贴证书内容到空白文本内并保存
 - 将文件重命名为 `server.cert.pem` 得到证书文件
-- 将证书文件`(server.cert.pem)`与私钥文件`(server.key.pem)`打包成一组.
 
 ## 内置API邮箱使用方法
 - 把 MX 记录解析至 api.moeclub.org 权重 10
