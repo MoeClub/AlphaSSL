@@ -28,7 +28,7 @@
 - 将文件重命名为 `server.cert.pem` 得到证书文件
 
 ## 内置API邮箱使用方法
-- 把 MX 记录解析至 `api.moeclub.org` 权重 10
+- 把 MX 记录解析至 `api.moeclub.org` 权重 `10`
 - 只保留这一条 MX 记录
 - 等待 MX 记录生效
 
