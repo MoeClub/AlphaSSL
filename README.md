@@ -11,7 +11,7 @@
 
 ## 准备CSR,并保存匹配的私钥
 - 域名: `*.domian.tld`
-- `自行准备CSR文件`或参考[`Get CSR With OpenSSL`](https://github.com/MoeClub/AlphaSSL/blob/master/CSR.md)或使用[`在线工具生成`](https://api.moeclub.org/SSL/CSR)
+- `自行准备CSR文件`或使用[`在线工具生成`](https://api.moeclub.org/SSL/CSR)
 - 创建私钥文件 `server.key.pem`
    - 新建空白文本文件(txt文档)
    - 粘贴私钥内容到空白文本内并保存
