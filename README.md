@@ -27,6 +27,14 @@
    5. 操作成功完成后即可删除 moeclub.org 解析。
 
 ```
+<details>
+<summary>图片版本请点击左边的小三角查看</summary>
+
+![图片版本](./Pic/freemind.png)
+
+- [图片链接](./Pic/freemind.png)
+
+</details>
 
 ## 申请前的准备
 - 将会使用 `admin@example.com` 接收确认邮件及证书。
