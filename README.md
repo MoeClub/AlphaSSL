@@ -37,7 +37,7 @@
 - <font color="yellow">**必须**</font> 暂停解析 CNAME 记录, 可能会**无法收到证书确认邮件**。
   - 此外 如果为主域申请证书,只需要暂停主域的 CNAME 解析. 不需要暂停子域名的 CNAME 解析。
 - **如果没有域名邮箱, 可以使用 `API模式` 完成。**
-- **AlphaSSL** 支持 **`RSA`** 和 **`ECC`** [`prime256v1`, `secp384r1`]
+- **AlphaSSL** 支持 **`RSA`** 和 **`ECC`** [prime256v1; secp384r1]
 
 ## 准备CSR,并保存匹配的私钥
 - 域名: `*.example.com`
@@ -48,14 +48,14 @@
   3. 将文件重命名为 `server.key.pem` 得到私钥文件
 
 ## 申请证书步骤
-- **注意**: 如果使用`内置API邮箱`,请先查看并完成[`内置API邮箱使用方法`](https://github.com/MoeClub/AlphaSSL/blob/master/README.md#%E5%86%85%E7%BD%AEapi%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)章节的步骤.
+- **注意**: 如果使用 `内置API邮箱` ,请先查看并完成 [`内置API邮箱使用方法`](https://github.com/MoeClub/AlphaSSL/blob/master/README.md#%E5%86%85%E7%BD%AEapi%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95) 章节的步骤。
 - 填入准备的 `CSR` 和 `ApplyToken` 信息, 点击 "Get AlphaSSL!"
 - 确认邮件.
 - 获得证书文件内容并[`创建证书文件`](https://github.com/MoeClub/AlphaSSL#%E5%88%9B%E5%BB%BA%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6).
-- 将证书文件`(server.cert.pem)`与私钥文件`(server.key.pem)`打包成一组.
+- 将证书文件`server.cert.pem`与私钥文件`server.key.pem`打包成一组。
 
 ## 创建证书文件
-- 新建空白文本文件(txt文档)
+- 新建空白文本文件
 - 粘贴证书内容到空白文本内并保存
 - 将文件重命名为 `server.cert.pem` 得到证书文件
 
@@ -72,10 +72,10 @@
   
 ### 通过内置API获得证书
   - **注意**:此项步骤前需要**确认邮件**
-  - 在填 CSR 的框框内填上 "VIEW" (不包括引号,仅4个字母)
-  - Apply Token 框内填申请时的 Apply Token
-  - 点击 "Get AlphaSSL!", 即可看到申请的证书(已补全证书链).
-  - **注意**: 此项操作如果未查询到证书,将会自动重发确认邮件.
+  - 在填 CSR 的框框内填上 `VIEW`
+  - Apply Token 框内填申请时的 ApplyToken
+  - 点击 `Get AlphaSSL!` , 即可看到申请的证书(已补全证书链)。
+  - **注意**: 此项操作如果未查询到证书,将会自动重发确认邮件。
 
 
 ## 补全证书链 (可选)
