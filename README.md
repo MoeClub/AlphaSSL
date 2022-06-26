@@ -106,6 +106,18 @@ MTh89N1SyvNTBCVXVmaU6Avu5gMUTu79bZRknl7OedSyps9AsUSoPocZXun4IRZZ
 Uw==
 -----END CERTIFICATE-----
 ```
+
+# 校验证书文件与密钥文件是否匹配
+```
+# 密钥文件 server.key.pem
+# 证书文件 server.cert.pem
+# 下面两行命令结果输出一致则为匹配
+
+openssl x509 -in server.cert.pem -pubkey -noout -outform pem |openssl md5
+openssl pkey -in server.key.pem -pubout -outform pem |openssl md5
+
+
+```
   
 
 ## 注意事项
