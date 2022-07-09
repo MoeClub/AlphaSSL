@@ -116,7 +116,7 @@ Uw==
 ```
 # 密钥文件 server.key.pem
 # 证书文件 server.cert.pem
-# 下面两行命令结果输出一致则为匹配
+# 下面两行命令结果输出一致则为匹配的证书
 
 openssl x509 -in server.cert.pem -pubkey -noout -outform pem |openssl md5
 openssl pkey -in server.key.pem -pubout -outform pem |openssl md5
