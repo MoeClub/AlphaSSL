@@ -59,9 +59,14 @@
 
 ## 内置API邮箱使用方法(强烈推荐)
 - 修改待申请证书的域名的 MX 记录(主域名一般为`@`)
-- 将 MX 记录解析至 `api.moeclub.org` 权重 `10`
+- 将 MX 记录解析至 `api.moeclub.org` 权重 `10` 
 - 只保留这一条 MX 记录
 - 等待 MX 记录生效
+  ```
+  设置示例: MX(解析类型)  10(权重)  @(主机名)  api.moeclub.org(目标值)
+  *.abc.com --> MX 10 @ api.moeclub.org     
+  *.sub.abc.com --> MX 10 sub api.moeclub.org
+  ```
 
 ### 通过内置API邮箱获得确认邮件
   - 在填 CSR 的框框内填上 "MAIL" (不包括引号,仅4个字母)
