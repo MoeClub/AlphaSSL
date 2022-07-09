@@ -63,7 +63,7 @@
 - 如果有其他 MX 记录将其暂停, 只保留这一条 MX 记录
 - 等待 MX 记录生效 (更改之前 TTL 设置的多少就等多少秒)
   ```
-  设置示例: MX(解析类型)  10(权重)  @(主机名)  api.moeclub.org(目标值)
+  设置解析示例: MX(解析类型)  10(权重)  @(主机名)  api.moeclub.org(目标值)
   *.abc.com --> MX 10 @ api.moeclub.org     
   *.sub.abc.com --> MX 10 sub api.moeclub.org
   ```
