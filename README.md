@@ -10,7 +10,7 @@
                            |
                            V
           检查域名的 MX 解析, 并确认使用 "8.8.8.8" 能过获得正确解析记录
-          检查域名的 CAA 解析, 暂停全部解析或者添加 0 issuewild "globalsign.com" 记录
+          检查域名的 CAA 解析, 暂停全部解析或添加 0 issuewild "globalsign.com"
           检查域名的 CNAME 解析, 如果有则暂停解析
                      /               \
     内置API模式      /                 \
