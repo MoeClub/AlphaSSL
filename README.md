@@ -28,7 +28,7 @@
 
 ```
 
-## 申请前的准备
+## 申请前须知
 - 将会使用 `admin@domain.tld` 接收确认邮件及证书.
 - 如遇到域名记录解析相关问题, 请检查域名注册商的`DNSSEC配置`和域名解析提供商的`DNSSEC配置`是否同时开启或者同时关闭.
 - **删除所有 CAA 解析记录**或**添加值为 `0 issuewild "globalsign.com"`的 CAA 解析记录**       
@@ -39,29 +39,28 @@
   使用的是`腾讯云(DNSPOD)`,`阿里云`等服务商提供的解析服务,请暂停该级域名一切解析并使用内置API邮箱完成签发.
 - **AlphaSSL** 支持 **`RSA`** 和 **`ECC`** (`prime256v1`, `secp384r1`)
 
-## 准备CSR,并保存匹配的私钥
+## 准备CSR并保存匹配的私钥
 - 域名: `*.domian.tld`
 - `自行准备CSR文件`或使用[`在线工具生成`](https://api.moeclub.org/SSL/CSR)
 - 创建私钥文件 `server.key.pem`
    - 新建空白文本文件(txt文档)
    - 粘贴私钥内容到空白文本内并保存
    - 将文件重命名为 `server.key.pem` 得到私钥文件
+- 创建证书文件 `server.cert.pem`
+   - 新建空白文本文件(txt文档)
+   - 等待签发下来的证书并粘贴的证书内容
+   - 将文件重命名为 `server.cert.pem` 得到证书文件
 
-## 申请证书步骤
-- **注意**: 如果使用`内置API邮箱`,请先查看并完成[`内置API邮箱使用方法`](https://github.com/MoeClub/AlphaSSL/blob/master/README.md#%E5%86%85%E7%BD%AEapi%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)章节的步骤.
+## 申请证书的步骤
+- **注意**: 如果使用`内置API邮箱`,请先查看并完成[`内置API邮箱使用方法`](https://github.com/MoeClub/AlphaSSL/blob/master/README.md#%E5%86%85%E7%BD%AEapi%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)章节中的解析步骤.
 - 填入准备的CSR和Apply Token信息, 点击 "Get AlphaSSL!"
-- 确认邮件 (通过内置API或者收件箱中的邮件).
-- 获得证书文件内容并[`创建证书文件`](https://github.com/MoeClub/AlphaSSL#%E5%88%9B%E5%BB%BA%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6).
+- 确认邮件 (手动点击收件箱中的邮件或者由内置API自动确认).
+- 获得证书文件内容并填充证书文件.
 - 将证书文件`(server.cert.pem)`与私钥文件`(server.key.pem)`打包成一组.
-
-## 创建证书文件
-- 新建空白文本文件(txt文档)
-- 粘贴证书内容到空白文本内并保存
-- 将文件重命名为 `server.cert.pem` 得到证书文件
 
 ## 内置API邮箱使用方法(强烈推荐)
 - 修改待申请证书的域名的 MX 记录(主域名一般为`@`)
-- 将 MX 记录解析至 `api.moeclub.org` 权重 `10` 
+- **将 MX 记录解析至** `api.moeclub.org` **权重** `10`
 - 如果有其他 MX 记录将其暂停, 只保留这一条 MX 记录
 - 等待 MX 记录生效 (更改之前 TTL 设置的多少就等多少秒)
   ```
@@ -69,19 +68,19 @@
   *.abc.com --> MX 10 @ api.moeclub.org     
   *.sub.abc.com --> MX 10 sub api.moeclub.org
   ```
-
-### 通过内置API邮箱获得确认邮件(可选操作)
-  - 在填 CSR 的框框内填上 "MAIL" (不包括引号,仅4个字母)
-  - Apply Token 框内填申请时的 Apply Token
-  - 点击 "Get AlphaSSL!", 即可看到提示.
-  
-### 通过内置API获得证书
-  - **注意**:此项步骤前需要**确认邮件**
+- **提交CSR内容**
+- **通过内置API获得证书**
+  - **注意**:此项步骤前需要**确认邮件**, 内置API模式会自动确认邮件.
   - 在填 CSR 的框框内填上 "VIEW" (不包括引号,仅4个字母)
   - Apply Token 框内填申请时的 Apply Token
   - 点击 "Get AlphaSSL!", 即可看到申请的证书(已补全证书链).
   - **注意**: 此项操作如果未查询到证书,将会自动重发确认邮件.
 
+## 通过内置API邮箱手动确认邮件
+  - 在填 CSR 的框框内填上 "MAIL" (不包括引号,仅4个字母)
+  - Apply Token 框内填申请时的 Apply Token
+  - 点击 "Get AlphaSSL!", 即可看到提示.
+  - **注意**: 内置API模式非特殊情况一般不需要进行此操作.
 
 ## 补全证书链(可选) [2027/10/12]
 - 将下面字段粘贴至证书文件`(server.cert.pem)`末尾即可
