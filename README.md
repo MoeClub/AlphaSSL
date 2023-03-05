@@ -52,7 +52,7 @@
    - 将文件重命名为 `server.cert.pem` 得到证书文件
 
 ## 申请证书的步骤
-- **注意**: 如果使用`内置API邮箱`,请先查看并完成[`内置API邮箱使用方法`](https://github.com/MoeClub/AlphaSSL/blob/master/README.md#%E5%86%85%E7%BD%AEapi%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90)章节中的解析步骤.
+- **注意**: 如果使用`内置API邮箱`,请先查看并完成[`内置API邮箱使用方法`](https://github.com/MoeClub/AlphaSSL/blob/master/README.md#%E5%86%85%E7%BD%AEapi%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90)章节中的步骤.
 - 填入准备的CSR和Apply Token信息, 点击 "Get AlphaSSL!"
 - 确认邮件 (手动点击收件箱中的邮件或者由内置API自动确认).
 - 获得证书文件内容并填充证书文件.
@@ -68,7 +68,8 @@
   *.abc.com --> MX 10 @ api.moeclub.org     
   *.sub.abc.com --> MX 10 sub api.moeclub.org
   ```
-- **提交CSR内容**
+- **填入准备的CSR和Apply Token信息, 点击 "Get AlphaSSL!"**
+- 等待 `5` 分钟
 - **通过内置API获得证书**
   - **注意**:此项步骤前需要**确认邮件**, 内置API模式会自动确认邮件.
   - 在填 CSR 的框框内填上 "VIEW" (不包括引号,仅4个字母)
