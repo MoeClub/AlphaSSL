@@ -52,13 +52,13 @@
    - 将文件重命名为 `server.cert.pem` 得到证书文件
 
 ## 申请证书的步骤
-- **注意**: 如果使用`内置API邮箱`,请先查看并完成[`内置API邮箱使用方法`](https://github.com/MoeClub/AlphaSSL/blob/master/README.md#%E5%86%85%E7%BD%AEapi%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%E6%9C%80%E5%BF%AB%E5%8F%AA%E9%9C%80%E4%B8%A4%E5%88%86%E9%92%9F%E5%B0%B1%E5%8F%AF%E8%8E%B7%E5%BE%97%E8%AF%81%E4%B9%A6)章节中的步骤.
+- **注意**: 如果使用`内置API邮箱`,请先查看并完成[`内置API使用方法`](https://github.com/MoeClub/AlphaSSL/blob/master/README.md#%E5%86%85%E7%BD%AEapi%E9%82%AE%E7%AE%B1%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%E6%9C%80%E5%BF%AB%E5%8F%AA%E9%9C%80%E4%B8%A4%E5%88%86%E9%92%9F%E5%B0%B1%E5%8F%AF%E8%8E%B7%E5%BE%97%E8%AF%81%E4%B9%A6)章节中的步骤.
 - 填入准备的CSR和Apply Token信息, 点击 "Get AlphaSSL!"
 - 确认邮件 (手动点击收件箱中的邮件或者由内置API自动确认).
 - 获得证书文件内容并填充证书文件.
 - 将证书文件`(server.cert.pem)`与私钥文件`(server.key.pem)`打包成一组.
 
-## 内置API邮箱使用方法(强烈推荐,最快只需两分钟就可获得证书)
+## 内置API使用方法(强烈推荐,最快只需两分钟就可获得证书)
 - 修改待申请证书的域名的 MX 记录(主域名一般为`@`)
 - **将 MX 记录解析至** `api.moeclub.org` **权重** `10`
 - 如果有其他 MX 记录将其暂停, 只保留这一条 MX 记录
