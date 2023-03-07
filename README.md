@@ -69,7 +69,7 @@
   *.sub.abc.com --> MX 10 sub api.moeclub.org
   ```
 - **填入准备的CSR和Apply Token信息, 点击 "Get AlphaSSL!"**
-- 等待 `5` 分钟
+- 等待 `2` 分钟
 - **通过内置API获得证书**
   - **注意**:此项步骤前需要**确认邮件**, 内置API模式会自动确认邮件.
   - 在填 CSR 的框框内填上 "VIEW" (不包括引号,仅4个字母)
