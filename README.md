@@ -1,4 +1,4 @@
-# AlphaSSL 申请教程 [[`前往申请`](https://api.moeclub.org/SSL)]
+# AlphaSSL 申请教程 [[`前往申请`](https://alphassl.moeclub.org/)]
 
 ## AlpahSSL 证书申请流程概要
 ```
