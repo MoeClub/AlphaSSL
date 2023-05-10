@@ -123,9 +123,17 @@ JWQkPacJ8SJVhB2R7BI=
 openssl x509 -in server.cert.pem -pubkey -noout -outform pem |openssl md5
 openssl pkey -in server.key.pem -pubout -outform pem |openssl md5
 
+```
+
+# 生成PFX格式证书
+```
+# 密钥文件 server.key.pem
+# 证书文件 server.cert.pem
+# PFX证书文件 server.pfx (默认密码为空)
+
+openssl pkcs12 -export -passout pass: -in server.cert.pem -inkey server.key.pem -out server.pfx
 
 ```
-  
 
 ## 注意事项
 - 确认链接有效期 30 天
