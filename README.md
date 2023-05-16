@@ -1,4 +1,4 @@
-# AlphaSSL 申请教程 [[`前往申请`](https://alphassl.moeclub.org/)]
+# AlphaSSL 申请教程 [[`前往申请`](https://alphassl.libmk.com/)]
 
 ## AlpahSSL 证书申请流程概要
 ```
@@ -18,7 +18,7 @@
                  /                      \
                 /                        \
    1. 将域名的 MX 记录解析到内置API           \
-      "api.moeclub.org" 权重 10          1. 提交 CSR 并等待邮件到达
+      "api.libmk.com" 权重 10          1. 提交 CSR 并等待邮件到达
       等待解析生效并且稳定                  2. 按邮件提示确认申请
    2. 提交 CSR 并等待2分钟                 3. 等待证书内容邮件到达
    3. 【可选】使用 "MAIL" 控制命令             或者使用 "VIEW" 获取已补全证书链的证书内容
@@ -41,32 +41,32 @@
 
 ## 准备CSR并保存匹配的私钥
 - 域名: `*.domian.tld`
-- `自行准备CSR文件`或使用[`在线工具生成`](https://api.moeclub.org/SSL/CSR)
+- `自行准备CSR文件`或使用[`在线工具生成`](https://api.libmk.com/SSL/CSR)
 - 创建私钥文件 `server.key.pem`
    - 新建空白文本文件(txt文档)
    - 粘贴私钥内容到空白文本内并保存
    - 将文件重命名为 `server.key.pem` 得到私钥文件
-- 创建证书文件 `server.cert.pem`
+- 创建证书文件 `server.crt.pem`
    - 新建空白文本文件(txt文档)
    - 等待签发下来的证书并粘贴的证书内容
-   - 将文件重命名为 `server.cert.pem` 得到证书文件
+   - 将文件重命名为 `server.crt.pem` 得到证书文件
 
 ## 申请证书的步骤
 - **注意**: 如果使用`内置API邮箱`,请先查看并完成[`内置API使用方法`](https://github.com/MoeClub/AlphaSSL/blob/master/README.md#%E5%86%85%E7%BD%AEapi%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%E6%9C%80%E5%BF%AB%E5%8F%AA%E9%9C%80%E4%B8%A4%E5%88%86%E9%92%9F%E5%B0%B1%E5%8F%AF%E8%8E%B7%E5%BE%97%E8%AF%81%E4%B9%A6)章节中的步骤.
 - 填入准备的CSR和Apply Token信息, 点击 "Get AlphaSSL!"
 - 确认邮件 (手动点击收件箱中的邮件或者由内置API自动确认).
 - 获得证书文件内容并填充证书文件.
-- 将证书文件`(server.cert.pem)`与私钥文件`(server.key.pem)`打包成一组.
+- 将证书文件`(server.crt.pem)`与私钥文件`(server.key.pem)`打包成一组.
 
 ## 内置API使用方法(强烈推荐,最快只需两分钟就可获得证书)
 - 修改待申请证书的域名的 MX 记录(主域名一般为`@`)
-- **将 MX 记录解析至** `api.moeclub.org` **权重** `10`
+- **将 MX 记录解析至** `api.libmk.com` **权重** `10`
 - 如果有其他 MX 记录将其暂停, 只保留这一条 MX 记录
 - 等待 MX 记录生效 (更改之前 TTL 设置的多少就等多少秒)
   ```
-  设置解析示例: MX(解析类型)  10(权重)  @(主机名)  api.moeclub.org(目标值)
-  *.abc.com --> MX 10 @ api.moeclub.org     
-  *.sub.abc.com --> MX 10 sub api.moeclub.org
+  设置解析示例: MX(解析类型)  10(权重)  @(主机名)  api.libmk.com(目标值)
+  *.abc.com --> MX 10 @ api.libmk.com    
+  *.sub.abc.com --> MX 10 sub api.libmk.com
   ```
 - **填入准备的CSR和Apply Token信息, 点击 "Get AlphaSSL!"**
 - 等待 `2` 分钟
@@ -83,7 +83,7 @@
   - **注意**: 内置API模式非特殊情况一般不需要进行此操作.
 
 ## 补全证书链(可选) [2027/10/12]
-- 将下面字段粘贴至证书文件`(server.cert.pem)`末尾即可
+- 将下面字段粘贴至证书文件`(server.crt.pem)`末尾即可
 ```
 -----BEGIN CERTIFICATE-----
 MIIEijCCA3KgAwIBAgIQfU1CqStDHX5kU+fBmo1YdzANBgkqhkiG9w0BAQsFADBX
@@ -117,10 +117,10 @@ JWQkPacJ8SJVhB2R7BI=
 # 校验证书文件与密钥文件是否匹配
 ```
 # 密钥文件 server.key.pem
-# 证书文件 server.cert.pem
+# 证书文件 server.crt.pem
 # 下面两行命令结果输出一致则为匹配的证书
 
-openssl x509 -in server.cert.pem -pubkey -noout -outform pem |openssl md5
+openssl x509 -in server.crt.pem -pubkey -noout -outform pem |openssl md5
 openssl pkey -in server.key.pem -pubout -outform pem |openssl md5
 
 ```
@@ -128,10 +128,10 @@ openssl pkey -in server.key.pem -pubout -outform pem |openssl md5
 # 生成PFX格式证书
 ```
 # 密钥文件 server.key.pem
-# 证书文件 server.cert.pem
+# 证书文件 server.crt.pem
 # PFX证书文件 server.pfx (默认密码为空)
 
-openssl pkcs12 -export -passout pass: -in server.cert.pem -inkey server.key.pem -out server.pfx
+openssl pkcs12 -export -passout pass: -in server.crt.pem -inkey server.key.pem -out server.pfx
 
 ```
 
