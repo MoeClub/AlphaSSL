@@ -135,6 +135,15 @@ openssl pkcs12 -export -passout pass: -in server.crt.pem -inkey server.key.pem -
 
 ```
 
+# 检查 OCSP
+```
+# 中间证书 intermediate.pem
+# 域名证书 server.crt.pem
+
+openssl ocsp -text -no_nonce -url 'http://ocsp.globalsign.com/alphasslcasha256g4' -header 'HOST=ocsp.globalsign.com' -issuer intermediate.pem -cert server.crt.pem
+
+```
+
 ## 注意事项
 - 确认链接有效期 30 天
 - 由于与邮箱链接的不确定性, 邮箱可能在1秒或1个星期内才会收到确认邮件.请耐心等待     
