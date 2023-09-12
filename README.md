@@ -148,6 +148,11 @@ HMUfpIBvFSDJ3gyICh3WZlXi/EjJKSZp4A==
 openssl x509 -in server.crt.pem -pubkey -noout -outform pem |openssl md5
 openssl pkey -in server.key.pem -pubout -outform pem |openssl md5
 
+
+# 查看证书信息
+
+openssl x509 -noout -text -in server.crt.pem
+
 ```
 
 # 生成PFX格式证书
