@@ -83,8 +83,7 @@
   - **注意**: 内置API模式非特殊情况一般不需要进行此操作.
 
 ## 补全证书链(可选) [2027/10/12]
-- 将下面字段粘贴至证书文件`(server.crt.pem)`末尾即可
-  #### 中间证书
+- 将下面字段`(中间证书)`粘贴至证书文件`(server.crt.pem)`末尾即可
 ```
 -----BEGIN CERTIFICATE-----
 MIIEijCCA3KgAwIBAgIQfU1CqStDHX5kU+fBmo1YdzANBgkqhkiG9w0BAQsFADBX
@@ -115,8 +114,7 @@ JWQkPacJ8SJVhB2R7BI=
 -----END CERTIFICATE-----
 ```
 
-- 将下面字段粘贴至证书文件`(server.crt.pem)`末尾即可(可选)
-  #### CA证书
+- 将下面字段`(CA证书)`粘贴至证书文件`(server.crt.pem)`末尾即可(可选)
 ```
 -----BEGIN CERTIFICATE-----
 MIIDdTCCAl2gAwIBAgILBAAAAAABFUtaw5QwDQYJKoZIhvcNAQEFBQAwVzELMAkG
