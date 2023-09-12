@@ -114,7 +114,7 @@ JWQkPacJ8SJVhB2R7BI=
 -----END CERTIFICATE-----
 ```
 
-- 将下面字段`(CA证书)`粘贴至证书文件`(server.crt.pem)`末尾即可(可选)
+- 将下面字段`(CA证书)`粘贴至证书文件`(server.crt.pem)`末尾即可 (可选)
 ```
 -----BEGIN CERTIFICATE-----
 MIIDdTCCAl2gAwIBAgILBAAAAAABFUtaw5QwDQYJKoZIhvcNAQEFBQAwVzELMAkG
